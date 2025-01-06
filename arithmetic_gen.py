@@ -1,6 +1,6 @@
 import random
 
-max_num = 5
+max_num = 6
 
 a = [x for x in range(0, max_num + 1)]
 b = [x for x in range(0, max_num + 1)]
