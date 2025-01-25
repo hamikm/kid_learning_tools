@@ -5,12 +5,10 @@ parser = argparse.ArgumentParser(
     prog='arithmetic helper',
     description='produces a two column list of basic arithmetic practice problems')
 parser.add_argument('-o', '--operators', help='space delimited list of operators to use')
+parser.add_argument('-m', '--max', help='biggest number to use')
 args = parser.parse_args()
 
-max_num = 10
-
-nums = [x for x in range(0, max_num + 1)]
-
+nums = [x for x in range(0, (int(args.max) if args.max is not None else 10) + 1)]
 ops = args.operators.split(' ') if args.operators is not None else ['+']
 
 num_lines_per_op = 16
