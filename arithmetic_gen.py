@@ -22,5 +22,5 @@ for i in range(num_lines_per_op):
     op1 = random.choice(ops)
     choice_a, choice_b = get_choices(is_subtraction = op1 == '-')
     op2 = random.choice(ops)
-    choice_c, choice_d = get_choices(is_subtraction = op1 == '-')
+    choice_c, choice_d = get_choices(is_subtraction = op2 == '-')
     print('%2d %2s %2d = \t\t%2d %2s %2d =' % (choice_a, op1, choice_b, choice_c, op2, choice_d))
